@@ -1,4 +1,4 @@
-# Medical Registration System
+# Patient Registration System
 
 ## Decisions
 
@@ -107,6 +107,8 @@ public class OutHttpJmsApp {
 The *ActiveMQ Artemis* broker client is configured via the following Spring properties:
 
 ```properties
+server.port=8080
+
 spring.artemis.mode=native
 spring.artemis.broker-url=tcp://${ACTIVEMQ_HOST}:${ACTIVEMQ_PORT}
 spring.artemis.user=${ACTIVEMQ_USER}
@@ -420,7 +422,7 @@ public class ObservationSegment {
 
 ```
 
-The *ActiveMQ Artemis* broker and MongoDB clients are configured via the following Spring properties:
+The *ActiveMQ Artemis* broker and MongoDB clients are configured via the following Spring properties.
 Additionally we externalise the configuration of the medical records system service.
 
 ```properties
