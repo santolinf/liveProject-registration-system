@@ -12,8 +12,9 @@ of [Microk8s](https://microk8s.io/) and Docker running on a virtualized Ubuntu S
 This enables me to develop on a variety of local workstation platforms (e.g., Windows, MacOSX and Linux based)
 and connect to the same Kubernetes-based infrastructure.
 
-Then locally, for each of the platforms, all that is needed is to install the Kubernetes command-line tool [kubectl](https://kubernetes.io/docs/tasks/tools/). 
-With this tool I can deploy and run commands on the remote Kubernetes cluster from any of my choice development platforms.
+Then locally, for each of the platforms, all that is needed is to install the Kubernetes command-line tool [kubectl](https://kubernetes.io/docs/tasks/tools/)
+and the camel-k-client command-line tool [kamel](https://github.com/apache/camel-k/releases).
+With these tool I can deploy and run commands on the remote Kubernetes cluster from any of my choice development platforms.
 
 ### Docker
 
@@ -1031,8 +1032,6 @@ Add application specific properties in the `application.properties` file.
 ```properties
 quarkus.http.port=8080
 %dev.quarkus.http.port=8282
-
-quarkus.http.root-path=/inbound
 
 quarkus.camel.fhir.enable-dstu2=false
 quarkus.camel.fhir.enable-dstu3=false
